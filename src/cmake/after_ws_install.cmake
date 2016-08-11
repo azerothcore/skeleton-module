@@ -1,5 +1,2 @@
-if( UNIX )
-  install(FILES "${CMAKE_SOURCE_DIR}/modules/skeleton-module/conf/my_custom.conf.dist" DESTINATION ${CONF_DIR})
-elseif( WIN32 )
-  install(FILES "${CMAKE_SOURCE_DIR}/modules/skeleton-module/conf/my_custom.conf.dist" DESTINATION "${CMAKE_INSTALL_PREFIX}")
-endif()
+
+install(FILES "${CMAKE_SOURCE_DIR}/modules/skeleton-module/conf/my_custom.conf.dist" DESTINATION ${CONF_DIR})
