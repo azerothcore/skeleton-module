@@ -1,6 +1,11 @@
-# PART 1 - Explanation on how to create your own module with
+# PART 1 - How to create your own module
 
-TODO
+[ THIS README IS A WORK IN PROGRESS ]
+
+
+You can use these scripts to start your project:
+
+https://github.com/azerothcore/azerothcore-boilerplates
 
 -------------------------------------------------------
 
@@ -18,6 +23,8 @@ This module allows to do this and this.
 
 Do this and that.
 
+![my new module screenshot](/screenshots/my_module.png?raw=true "my new module screenshot")
+
 
 ## Requirements
 
@@ -28,14 +35,13 @@ My new module requires:
 
 ## Installation
 
+```
 1) Simply place the module under the `modules` directory of your AzerothCore source. 
-
-2) Import the SQL manually or with the `db_assembler.sh` (if `include.sh` provided)
-
+2) Import the SQL manually to the right Database (auth, world or characters) or with the `db_assembler.sh` (if `include.sh` provided).
 3) Re-run cmake and launch a clean build of AzerothCore.
+```
 
-
-## Edit module configuration (Optional)
+## Edit module configuration (optional)
 
 If you need to change the module configuration, go to your server configuration folder (where your `worldserver` or `worldserver.exe` is), copy `my_module.conf.dist` to `my_module.conf` and edit that new file.
 
