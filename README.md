@@ -48,10 +48,10 @@ If you need to change the module configuration, go to your server configuration 
 
 ## Credits
 
-Me (author of the module): Check out my soundcloud - Join my discord
+@Me (author of the module): Check out my soundcloud - Join my discord
 
-Barbz: best guy
+@BarbzYHOOL: best guy
 
-Talamortis: almost best guy
+@Talamortis: almost best guy
 
 AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)
