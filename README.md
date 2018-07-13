@@ -25,6 +25,9 @@ Do this and that.
 
 ![my new module screenshot](/screenshots/my_module.png?raw=true "my new module screenshot")
 
+<!-- Video example - We can't embed videos on github, only on github.io pages. If you can, make an animated gif of your video instead (but it's not needed) -->
+[![Youtube Link](https://i.imgur.com/Jhrdgv6.png)](https://www.youtube.com/watch?v=T6UEX47mPeE)
+
 
 ## Requirements
 
