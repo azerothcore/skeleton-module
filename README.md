@@ -7,6 +7,12 @@ You can use these scripts to start your project:
 
 https://github.com/azerothcore/azerothcore-boilerplates
 
+### How to test your module?
+
+Disable PCH (precompiled headers) and try to compile. If you forgot some headers, it is time to add them !
+To disable PCH, follow this [link](https://github.com/azerothcore/azerothcore-wotlk/wiki/CMake-options) and set `USE_COREPCH ` to 0 with Cmake.
+
+
 -------------------------------------------------------
 
 # PART 2 - EXAMPLE OF A README.md
