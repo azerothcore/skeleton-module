@@ -6,6 +6,7 @@
 ```
 CREATE TABLE IF NOT EXISTS `table`(
   `id` int(11) unsigned NOT NULL,
+  `column` smallint(6) unsigned,
   `active` BOOLEAN DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
