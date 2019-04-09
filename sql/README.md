@@ -20,6 +20,10 @@ Use "TinyInt(1)"" or "Boolean" (this is the same thing)
 If there are multiple booleans in the same table, bit(1) is better, otherwise it's the same result.
 
 
+## Rules
+
+Use InnoDB as engine and utf8 as charset.
+
 ## Resources
 
 https://www.w3schools.com/sql/sql_datatypes.asp
