@@ -1,3 +1,4 @@
+ [English](README.md) | [Español](README_ES.md)
 # PART 1 - How to create your own module
 
 [ THIS README IS A WORK IN PROGRESS ]
