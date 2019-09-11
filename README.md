@@ -59,7 +59,5 @@ If you need to change the module configuration, go to your server configuration 
 ## Credits
 
 * [Me](https://github.com/YOUR_GITHUB_NAME) (author of the module): Check out my soundcloud - Join my discord
-* [BarbzYHOOL](https://github.com/barbzyhool): best guy <!-- you can remove this small joke or modify it, but if you let the names, we get notified when a new module is made, which is quite cool) -->
-* [Talamortis](https://github.com/talamortis): almost best guy <!-- you can remove this small joke or modify it, but if you let the names, we get notified when a new module is made, which is quite cool) -->
 
 AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)
