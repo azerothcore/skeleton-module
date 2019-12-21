@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#
+# CUSTOM
+#
+
+DB_WORLD_CUSTOM_PATHS+=(
+	$MOD_SKELETON_ROOT"/sql/auth/"
+	$MOD_SKELETON_ROOT"/sql/characters/"
+	$MOD_SKELETON_ROOT"/sql/world/"
+)
+
+#
+# UPDATES
+#
+
+DB_WORLD_UPDATE_PATHS+=(
+	$MOD_SKELETON_ROOT"/sql/updates/auth/"
+	$MOD_SKELETON_ROOT"/sql/updates/characters/"
+	$MOD_SKELETON_ROOT"/sql/updates/world/"
+)
