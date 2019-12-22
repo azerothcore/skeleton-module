@@ -4,7 +4,8 @@
 
 #include "ScriptMgr.h"
 #include "Player.h"
-#include "Configuration/Config.h"
+#include "Config.h"
+#include "Chat.h"
 
 class MyPlayer : public PlayerScript{
 public:
