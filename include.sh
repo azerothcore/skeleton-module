@@ -2,8 +2,8 @@
 
 MOD_SKELETON_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/" && pwd )"
 
-source $MOD_SKELETON_ROOT"/conf/conf.sh.dist"
+source $MOD_SKELETON_ROOT"/conf/config.sh.dist"
 
-if [ -f $MOD_SKELETON_ROOT"/conf/conf.sh" ]; then
-    source $MOD_SKELETON_ROOT"/conf/conf.sh"
+if [ -f $MOD_SKELETON_ROOT"/conf/config.sh" ]; then
+    source $MOD_SKELETON_ROOT"/conf/config.sh"
 fi
