@@ -1,17 +1,34 @@
 #!/usr/bin/env bash
 
-#
-# CUSTOM
-#
+## CUSTOM SQL
+## Keep only the required variables (base sql files or updates, depending on the DB)
+
+
+## BASE SQL
 
 DB_AUTH_CUSTOM_PATH+=(
-	$MOD_SKELETON_ROOT"/sql/auth/"
+	$MOD_SKELETON_ROOT"/sql/auth/base/"
 )
 
 DB_CHARACTERS_CUSTOM_PATHS+=(
-	$MOD_SKELETON_ROOT"/sql/characters/"
+	$MOD_SKELETON_ROOT"/sql/characters/base/"
 )
 
 DB_WORLD_CUSTOM_PATHS+=(
-	$MOD_SKELETON_ROOT"/sql/world/"
+	$MOD_SKELETON_ROOT"/sql/world/base/"
+)
+
+
+## UPDATES
+
+DB_AUTH_UPDATE_PATHS+=(
+	$MOD_SKELETON_ROOT"/sql/auth/updates/"
+)
+
+DB_CHARACTERS_UPDATE_PATHS+=(
+	$MOD_SKELETON_ROOT"/sql/characters/updates/"
+)
+
+DB_WORLD_UPDATE_PATHS+=(
+	$MOD_SKELETON_ROOT"/sql/world/updates/"
 )
