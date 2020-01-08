@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## CUSTOM SQL
+## CUSTOM SQL - Important file used by the db_assembler.sh
 ## Keep only the required variables (base sql files or updates, depending on the DB)
 
 
