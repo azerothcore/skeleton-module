@@ -6,7 +6,7 @@
 
 ## BASE SQL
 
-DB_AUTH_CUSTOM_PATH+=(
+DB_AUTH_CUSTOM_PATHS+=(
 	$MOD_SKELETON_ROOT"/sql/auth/base/"
 )
 
