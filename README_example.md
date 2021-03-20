@@ -19,7 +19,7 @@ Do this and that.
 
 My_new_module requires:
 
-- AzerothCore v2.0.0+
+- AzerothCore v3.0.0+
 
 
 ## Installation
