@@ -18,3 +18,8 @@ Disable PCH (precompiled headers) and try to compile. To disable PCH, set `-DNOP
 
 If you forgot some headers, it is time to add them!
 
+## Licensing
+
+The default license of the skeleton-module template is the AGPL but you can use a different license for your own modules.
+
+So modules can also be kept private. However, if you need to add new hooks to the core, as well as improving existing ones, you have to share your improvements because the main core is released under the AGPL license. Please [provide a PR](https://www.azerothcore.org/wiki/How-to-create-a-PR) if that is the case.
