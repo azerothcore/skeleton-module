@@ -8,8 +8,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        compiler: [clang6, clang9, clang10]
-    runs-on: ubuntu-20.04
+        compiler: [clang, clang11]
+    runs-on: ubuntu-latest
     name: ${{ matrix.compiler }}
     env:
       COMPILER: ${{ matrix.compiler }}
@@ -19,12 +19,8 @@ jobs:
           repository: 'azerothcore/azerothcore-wotlk'
           ref: 'master'
           submodules: 'recursive'
-      - uses: actions/checkout@v2
-        with:
-          submodules: 'recursive'
-          path: 'modules/mod-cfbg'
       - name: Cache
-        uses: actions/cache@v1.1.2
+        uses: actions/cache@v2
         with:
           path: /home/runner/.ccache
           key: ccache:${{ matrix.compiler }}:${{ github.ref }}:${{ github.sha }}
@@ -32,9 +28,11 @@ jobs:
             ccache:${{ matrix.compiler }}:${{ github.ref }}
             ccache:${{ matrix.compiler }}
       - name: Configure OS
-        run: source ./apps/ci/ci-install.sh
+        run: source ./acore.sh install-deps
         env:
           CONTINUOUS_INTEGRATION: true
+      - name: Create conf/config.sh
+        run: source ./apps/ci/ci-conf.sh
       - name: Import db
         run: source ./apps/ci/ci-import-db.sh
       - name: Build
@@ -43,3 +41,5 @@ jobs:
         run: source ./apps/ci/ci-worldserver-dry-run.sh
       - name: Check startup errors
         run: source ./apps/ci/ci-error-check.sh
+      - name: Run unit tests
+        run: source ./apps/ci/ci-run-unit-tests.sh
