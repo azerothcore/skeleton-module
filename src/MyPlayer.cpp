@@ -15,7 +15,7 @@ public:
 
     void OnLogin(Player* player) override
     {
-        if (sConfigMgr->GetBoolDefault("MyCustom.enableHelloWorld", false))
+        if (sConfigMgr->GetOption<bool>("MyModule.Enable", false))
         {
             ChatHandler(player->GetSession()).SendSysMessage("Hello World from Skeleton-Module!");
         }
