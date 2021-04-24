@@ -3,7 +3,6 @@
 ## CUSTOM SQL - Important file used by the db_assembler.sh
 ## Keep only the required variables (base sql files or updates, depending on the DB)
 
-
 ## BASE SQL
 
 DB_AUTH_CUSTOM_PATHS+=(
@@ -17,7 +16,6 @@ DB_CHARACTERS_CUSTOM_PATHS+=(
 DB_WORLD_CUSTOM_PATHS+=(
 	$MOD_SKELETON_ROOT"/sql/world/base/"
 )
-
 
 ## UPDATES
 

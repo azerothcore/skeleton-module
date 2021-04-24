@@ -5,19 +5,15 @@
 ## Example 2: fix(CORE/Raid): Phase 2 of Ragnaros
 ## Example 3: feat(CORE/Commands): New GM command to do something
 
-
 ### DESCRIPTION
 ## Explain why this change is being made, what does it fix etc...
 ## |---- Write below the examples with a maximum of 72 characters per lines ----|
 ## Example: Hogger (id: 492) was not charging player when being engaged.
 
-
 ## Provide links to any issue, commit, pull request or other resource
 ## Example 1: Closes issue #23
 ## Example 2: Ported from other project's commit (link)
 ## Example 3: References taken from wowpedia / wowhead / wowwiki / https://wowgaming.altervista.org/aowow/
-
-
 
 ## =======================================================
 ##                     EXTRA INFOS
