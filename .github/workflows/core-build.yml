@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        compiler: [clang, clang11]
+        compiler: [clang]
     runs-on: ubuntu-latest
     name: ${{ matrix.compiler }}
     env:
