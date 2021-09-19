@@ -41,7 +41,7 @@ Se debe especificar que versión de azerothcore requiere, porque podría ser inc
 
 Mi nuevo módulo requiere:
 
-- AzerothCore v1.0.1+
+- AzerothCore v4.0.0+
 
 
 ## Instalación
