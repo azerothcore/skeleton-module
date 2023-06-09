@@ -17,7 +17,7 @@ public:
     {
         if (sConfigMgr->GetOption<bool>("MyModule.Enable", false))
         {
-            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Skeleton-Module!");
+            ChatHandler(player->GetSession()).PSendSysMessage(35410);
         }
     }
 };
