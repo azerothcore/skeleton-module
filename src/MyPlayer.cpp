@@ -25,11 +25,6 @@ public:
             ChatHandler(player->GetSession()).PSendSysMessage(HELLO_WORLD);
         }
     }
-
-    void OnBeforeLootItem(Player* player, LootItem& item)
-    {
-        item.freeforall = true;
-    }
 };
 
 // Add all scripts in one
