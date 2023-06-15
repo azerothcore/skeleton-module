@@ -7,6 +7,11 @@
 #include "Config.h"
 #include "Chat.h"
 
+enum MyPlatyerAcoreString
+{
+    HELLO_WORLD = 35410
+};
+
 // Add player scripts
 class MyPlayer : public PlayerScript
 {
@@ -17,7 +22,7 @@ public:
     {
         if (sConfigMgr->GetOption<bool>("MyModule.Enable", false))
         {
-            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Skeleton-Module!");
+            ChatHandler(player->GetSession()).PSendSysMessage(HELLO_WORLD);
         }
     }
 };
