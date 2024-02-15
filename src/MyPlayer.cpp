@@ -7,7 +7,7 @@
 #include "Config.h"
 #include "Chat.h"
 
-enum MyPlatyerAcoreString
+enum MyPlayerAcoreString
 {
     HELLO_WORLD = 35410
 };

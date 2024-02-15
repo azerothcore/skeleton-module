@@ -14,4 +14,4 @@
 #                     1 - Enabled
 #
 
-MyModule.Enable = 1
+MyModule.Enable = 0
