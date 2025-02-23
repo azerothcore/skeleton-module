@@ -18,12 +18,10 @@ class MyPlayer : public PlayerScript
 public:
     MyPlayer() : PlayerScript("MyPlayer") { }
 
-    void OnLogin(Player* player) override
+    void OnPlayerLogin(Player* player) override
     {
         if (sConfigMgr->GetOption<bool>("MyModule.Enable", false))
-        {
             ChatHandler(player->GetSession()).PSendSysMessage(HELLO_WORLD);
-        }
     }
 };
 
