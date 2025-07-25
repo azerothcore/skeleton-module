@@ -41,7 +41,7 @@ public:
 
     void OnPlayerLogin(Player* player) override
     {
-        if (sConfigMgr->GetOption<bool>("MyModule.Enable", false))
+        if (myConfigData.GetConfigValue<bool>(MyConfig::ENABLED))
             ChatHandler(player->GetSession()).PSendSysMessage(HELLO_WORLD);
     }
 };
