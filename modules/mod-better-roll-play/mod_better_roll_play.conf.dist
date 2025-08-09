@@ -1,36 +1,44 @@
-# Hauptschalter
+# mod-better-roll-play configuration
+
 BetterRP.Enable = 1
 
-# Gossip-Grüße & Optionen
+# --- Greeting ---
 BetterRP.Greeting.CooldownMs = 5000
-BetterRP.Greeting.UseExtraEmote = 1          # 0/1
-BetterRP.Greeting.ExtraEmoteChance = 50      # 0–100
-BetterRP.Greeting.ExtraEmotes = "WAVE,BOW,DANCE,CHEER,SALUTE"
-BetterRP.Greeting.YellChance = 0             # 0–100 (0 = nie Yell)
+BetterRP.Greeting.UseExtraEmote = 1
+BetterRP.Greeting.ExtraEmoteChance = 50
+BetterRP.Greeting.ExtraEmotes = WAVE,BOW,DANCE,CHEER,SALUTE
+BetterRP.Greeting.YellChance = 0
 
-# Texte (Pipe-separiert; {name} wird ersetzt)
+# Fallback texts (used if TextPool is disabled or no pool entry is found)
 BetterRP.Texts.EN = "Hello, {name}!|Welcome, {name}!|Greetings, {name}!"
 BetterRP.Texts.DE = "Hallo, {name}!|Willkommen, {name}!|Seid gegrüßt, {name}!"
 
-# Optionale zusätzliche Sprüche nach der Begrüßung (Chance separat)
-BetterRP.Followup.Enable = 1
-BetterRP.Followup.Chance = 30
-BetterRP.Followup.Texts.EN = "Safe travels!|How can I help you?"
-BetterRP.Followup.Texts.DE = "Gute Reise!|Wie kann ich helfen?"
+# --- External Text Pool ---
+BetterRP.TextPool.Enable = 1
+# Files are resolved relative to worldserver working dir (etc/)
+BetterRP.TextPool.LocaleEN = "better_rp_texts.en.txt"
+BetterRP.TextPool.LocaleDE = "better_rp_texts.de.txt"
+BetterRP.TextPool.ReloadCommand = 1
 
-# Whitelist/Blacklist (EntryIDs), CSV
-BetterRP.Filter.Whitelist = ""
-BetterRP.Filter.Blacklist = ""
+# --- Filters ---
+BetterRP.Filter.Whitelist =
+BetterRP.Filter.Blacklist =
 
-# Ambient-Emotes (Idle), nur wenn Spieler in Reichweite; kein Wetter/keine Tageszeit
-BetterRP.Ambient.Enable = 0
+# --- Ambient ---
+BetterRP.Ambient.Enable = 1
 BetterRP.Ambient.IntervalMs = 15000
 BetterRP.Ambient.RangeMin = 0.0
 BetterRP.Ambient.RangeMax = 25.0
-BetterRP.Ambient.Emotes = "LOOK_AROUND,TALK,LAUGH,SIT,EAT,DRINK"
+BetterRP.Ambient.Emotes = LOOK_AROUND,TALK,LAUGH,SIT,EAT,DRINK
+BetterRP.Ambient.Chance = 75
+BetterRP.Ambient.JitterMs = 1000
 
-# Reaktion auf Spieler-Emotes
+# --- React to player emotes ---
 BetterRP.ReactToPlayerEmotes = 1
 BetterRP.React.CooldownMs = 3000
 BetterRP.React.RangeMax = 5.0
-BetterRP.React.Supported = "WAVE,DANCE,CHEER,SALUTE,BOW"
+BetterRP.React.Supported = WAVE,DANCE,CHEER,SALUTE,BOW
+
+# --- Throttle / Anti-Spam (per creature) ---
+BetterRP.Throttle.GossipBudgetPerMinute = 60
+BetterRP.Throttle.ReactBudgetPerMinute  = 60
