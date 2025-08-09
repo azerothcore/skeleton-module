@@ -1,25 +1,94 @@
-# SKELETON - Module template
+mod-better-roll-play
+English | Deutsch
 
-[English](README.md) | [Español](README_ES.md)
+Overview
+mod-better-roll-play is an AzerothCore module for 3.3.5a that makes NPC interactions feel more alive — completely without any database dependencies.
+It enhances the roleplay atmosphere with configurable greetings, random emotes, optional follow-up dialogues, ambient idle emotes, and reactions to player emotes.
+All texts and emotes are controlled via a .conf file.
 
+Features
+Gossip Greeting:
 
-## How to create your own module
+NPC waves (EMOTE_ONESHOT_WAVE) when opening the gossip menu.
 
-1. Use the script `create_module.sh` located in [`modules/`](https://github.com/azerothcore/azerothcore-wotlk/tree/master/modules) to start quickly with all the files you need and your git repo configured correctly (heavily recommended).
-1. You can then use these scripts to start your project: https://github.com/azerothcore/azerothcore-boilerplates
-1. Do not hesitate to compare with some of our newer/bigger/famous modules.
-1. Edit the `README.md` and other files (`include.sh` etc...) to fit your module. Note: the README is automatically created from `README_example.md` when you use the script `create_module.sh`.
-1. Publish your module to our [catalogue](https://www.azerothcore.org/catalogue.html).
+Sends a random greeting text in the client’s language (DE/EN).
 
+Optional extra emotes (e.g., BOW, DANCE, CHEER).
 
-## How to test your module?
+Optional follow-up phrases after the greeting.
 
-Disable PCH (precompiled headers) and try to compile. To disable PCH, set `-DNOPCH=1` with Cmake (more info [here](http://www.azerothcore.org/wiki/CMake-options)).
+Configurable yell chance.
 
-If you forgot some headers, it is time to add them!
+Ambient Idle Emotes:
 
-## Licensing
+NPCs can perform random emotes at certain intervals when players are nearby.
 
-The default license of the skeleton-module template is the MIT but you can use a different license for your own modules.
+Configurable emote list, range, and interval.
 
-So modules can also be kept private. However, if you need to add new hooks to the core, as well as improving existing ones, you have to share your improvements because the main core is released under the AGPL license. Please [provide a PR](https://www.azerothcore.org/wiki/How-to-create-a-PR) if that is the case.
+Reaction to Player Emotes:
+
+Detects supported player text emotes nearby (e.g., WAVE, DANCE, BOW).
+
+NPC mirrors the emote with a short delay.
+
+Whitelist/Blacklist:
+
+Only specific NPCs react (whitelist) or specific NPCs are excluded (blacklist).
+
+Configurable via .conf:
+
+All texts, emotes, probabilities, distances, and cooldowns.
+
+No database changes required.
+
+Installation
+Place the module folder into your AzerothCore source directory:
+
+bash
+Kopieren
+Bearbeiten
+modules/mod-better-roll-play/
+Make sure the following files are present:
+
+CMakeLists.txt
+
+mod_better_roll_play.cpp
+
+mod_better_roll_play.conf.dist
+
+Rebuild the core:
+
+bash
+Kopieren
+Bearbeiten
+cmake ../ -DCMAKE_BUILD_TYPE=Release
+make
+make install
+Copy mod_better_roll_play.conf.dist into your etc/ folder and rename it to:
+
+Kopieren
+Bearbeiten
+mod_better_roll_play.conf
+Adjust the settings as desired.
+
+Configuration Example
+(from mod_better_roll_play.conf.dist)
+
+ini
+Kopieren
+Bearbeiten
+BetterRP.Enable = 1
+BetterRP.Greeting.CooldownMs = 5000
+BetterRP.Greeting.ExtraEmoteChance = 50
+BetterRP.Texts.EN = "Hello, {name}!|Welcome, {name}!"
+BetterRP.Texts.DE = "Hallo, {name}!|Willkommen, {name}!"
+BetterRP.Ambient.Enable = 0
+BetterRP.ReactToPlayerEmotes = 1
+Compatibility
+Fully compatible with azerothcore/azerothcore-wotlk
+
+No changes to core or database required.
+
+License
+This module is released under the MIT License.
+You are free to use and modify it privately. Improvements to the core must be contributed back to the main project under the AGPL license.
