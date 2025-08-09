@@ -1,0 +1,11 @@
+# type|category|weight|text
+SAY|gossip|10|Hello, {name}!
+SAY|gossip|8|Welcome, {name}!
+SAY|gossip|6|Good to see you, {name}.
+YELL|gossip|2|Make way for {name}!
+EMOTE|gossip|5|waves at {name} cheerfully.
+EMOTE|ambient|5|looks around curiously.
+SAY|ambient|3|What a day…
+EMOTE|react_wave|10|waves back at {name}.
+EMOTE|react_dance|10|shows some slick moves.
+EMOTE|react_bow|10|bows to {name}.

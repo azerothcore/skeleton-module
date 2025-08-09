@@ -3,11 +3,11 @@
 ### Better role-play interactions for AzerothCore 3.3.5a
 
 **DE:** Dieses Modul verleiht NPCs mehr Leben: Begrüßungen mit Zufallstexten,
-zusätzliche Emotes, optionale Follow‑ups, Reaktionen auf Spieler‑Emotes und
+zusätzliche Emotes, Reaktionen auf Spieler‑Emotes und
 ambientes Verhalten ohne Datenbankabhängigkeit.
 
 **EN:** This module adds light‑weight role‑play flavour to NPCs: random greeting
-texts, extra emotes, optional follow‑ups, reactions to player emotes and idle
+texts, extra emotes, reactions to player emotes and idle
 ambient emotes – all without any database requirements.
 
 ## Features
@@ -49,9 +49,6 @@ BetterRP.Texts.DE = "Hallo, {name}!|Willkommen, {name}!|Seid gegrüßt, {name}!"
 | `BetterRP.Greeting.ExtraEmotes` | Comma list of emotes for extra emote |
 | `BetterRP.Greeting.YellChance` | Chance to yell instead of say |
 | `BetterRP.Texts.EN` / `BetterRP.Texts.DE` | Pipe‑separated greeting texts |
-| `BetterRP.Followup.Enable` | Enable optional follow‑up phrases |
-| `BetterRP.Followup.Chance` | Chance to trigger follow‑up |
-| `BetterRP.Followup.Texts.EN` / `.DE` | Pipe‑separated follow‑up texts |
 | `BetterRP.Filter.Whitelist` | Optional CSV whitelist of creature entries |
 | `BetterRP.Filter.Blacklist` | CSV blacklist of creature entries |
 | `BetterRP.Ambient.Enable` | Enable ambient idle emotes |
@@ -67,3 +64,20 @@ BetterRP.Texts.DE = "Hallo, {name}!|Willkommen, {name}!|Seid gegrüßt, {name}!"
 
 Tested with `azerothcore/azerothcore-wotlk` (3.3.5a).
 
+
+## Text Pool (external)
+You can provide large, language-specific roleplay lines via flat files (no DB).
+Format per line: `type|category|weight|text`  
+Types: `SAY|YELL|EMOTE|WHISPER` · Categories: `gossip|ambient|react_*` (e.g. `react_wave`).
+
+Ship files next to your `worldserver` working dir (usually `etc/`):
+- `better_rp_texts.en.txt`
+- `better_rp_texts.de.txt`
+
+Enable in `mod_better_roll_play.conf`:
+
+BetterRP.TextPool.Enable = 1
+BetterRP.TextPool.LocaleEN = "better_rp_texts.en.txt"
+BetterRP.TextPool.LocaleDE = "better_rp_texts.de.txt"
+
+Hot-reload (GM): `.btrp reload`
