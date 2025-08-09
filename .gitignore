@@ -46,3 +46,10 @@ local.properties
 .loadpath
 .project
 .cproject
+# Build artifacts
+build/
+CMakeFiles/
+*.user
+*.suo
+*.o
+*.obj
